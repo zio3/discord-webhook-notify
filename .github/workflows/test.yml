@@ -1,5 +1,9 @@
 name: Test Action
-on: [ push ]
+on:   
+  workflow_dispatch:
+  push:
+    branches: 
+      - main    
 jobs: 
   linux_test:
     runs-on: ubuntu-latest

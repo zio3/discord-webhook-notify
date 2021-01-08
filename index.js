@@ -75,13 +75,9 @@ async function run() {
         core.info(`${username} ${avatarUrl} ${color} ${description} ${details} ${footer} ${text}`)
 
         const msg = new webhook.MessageBuilder()
-                        .setName(username || default_username)
-                        .setAvatar(avatarUrl || default_avatarUrl)
-                        .setColor(color || default_colors[severity])
-                        .setDescription((description || await getDefaultDescription()) + "\n" + details)
-                        .setFooter(footer || ("Severity: " + long_severity[severity]))
-                        .setText(text)
-                        .setTime();
+                                .setName("Username")
+                                .setColor("#aabbcc")
+                                .setText("This is my webhook!");
 
         hook.send(msg);
 

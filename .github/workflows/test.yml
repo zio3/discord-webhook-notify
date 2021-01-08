@@ -1,7 +1,7 @@
 name: Test Action
 on: [ push ]
-jobs:
-  windows_test:
+jobs: 
+  windows_test:　
     runs-on: windows-latest
     name: Windows Test Job
     steps:

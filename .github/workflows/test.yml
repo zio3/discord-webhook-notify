@@ -10,25 +10,25 @@ jobs:
     name: Linux Test Job
     steps:
     - name: Linux Test Info
-      uses: zio3/discord-webhook-notify@v1
+      uses: zio3/discord-webhook-notify@v1.0.5
       with:
         severity: info
         details: Test succeeded.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Warn
-      uses: zio3/discord-webhook-notify@v1
+      uses: zio3/discord-webhook-notify@v1.0.5
       with:
         severity: warn
         details: Test warning.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Error
-      uses: zio3/discord-webhook-notify@v1
+      uses: zio3/discord-webhook-notify@v1.0.5
       with:
         severity: error
         details: Test error.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Custom
-      uses: zio3/discord-webhook-notify@v1
+      uses: zio3/discord-webhook-notify@v1.0.5
       with:
         severity: info
         username: CustomUsername
@@ -40,19 +40,19 @@ jobs:
         text: This is where text goes.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Success
-      uses: zio3/discord-webhook-notify@v1
+      uses: zio3/discord-webhook-notify@v1.0.5
       if: success()
       with:
         severity: info
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Failure
-      uses: zio3/discord-webhook-notify@v1
+      uses: zio3/discord-webhook-notify@v1.0.5
       if: failure()
       with:
         severity: error
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Cancelled
-      uses: zio3/discord-webhook-notify@v1
+      uses: zio3/discord-webhook-notify@v1.0.5
       if: cancelled()
       with:
         severity: warn
